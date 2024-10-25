@@ -1,20 +1,34 @@
-const Navbar = () => {
+import PropTypes from 'prop-types';
+
+const Navbar = ({ initialBalance = 0 }) => {
     return (
         <div className="navbar bg-base-100 p-5 px-20">
             <div className="flex-1">
-                <img src="/src/assets/logo.png" alt="" />
+                <img src="/src/assets/logo.png" alt="Site Logo" />
             </div>
             <div className="flex-none">
-                <ul className="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>Fixture</a></li>
-                    <li><a>Teams</a></li>
-                    <li><a>Schedules</a></li>
-                </ul>
-                <button className="btn"><span id="total-balance">0</span>Coin<img src="/src/assets/coin.png" alt="" /></button>
+                <nav>
+                    <ul className="menu menu-horizontal px-1">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#fixture">Fixture</a></li>
+                        <li><a href="#teams">Teams</a></li>
+                        <li><a href="#schedules">Schedules</a></li>
+                    </ul>
+                </nav>
+                <button 
+                    className="btn ml-4 flex items-center"
+                    aria-label="Coin Balance"
+                >
+                    <span id="total-balance" className="mr-2">{initialBalance}</span> Coin
+                    <img src="/src/assets/coin.png" alt="Coin Icon" className="ml-2" />
+                </button>
             </div>
         </div>
     );
+};
+
+Navbar.propTypes = {
+    initialBalance: PropTypes.number
 };
 
 export default Navbar;
