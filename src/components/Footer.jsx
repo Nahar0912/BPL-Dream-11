@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
-        <div className="bg-slate-950 text-white py-5 flex flex-col items-center">
-            <img className="mb-8" src="/src/assets/logo-footer.png" alt="Footer Logo" />
+        <div className="bg-slate-950 text-white pt-40 flex flex-col items-center">
+            <img className="mb-8" src="/src/assets/logo-footer.png" alt="Footer Logo" /><br />
             <footer className="mb-10 footer flex flex-col sm:flex-row justify-between w-full max-w-6xl">
                 <nav className="text-center sm:text-left">
                     <h6 className="footer-title">About Us</h6>
@@ -10,7 +10,7 @@ const Footer = () => {
                         services to our customers.
                     </p>
                 </nav>
-                <nav className="ml-0 sm:ml-10 text-center sm:text-left">
+                <nav className="mr-28 sm:ml-10 text-center sm:text-left">
                     <h6 className="footer-title">Quick Links</h6>
                     <ul>
                         <li><a className="link link-hover">About us</a></li>
@@ -23,12 +23,12 @@ const Footer = () => {
                     <h6 className="footer-title">Subscribe</h6>
                     <fieldset className="form-control w-80 mx-auto sm:mx-0">
                         <label className="label">
-                            <span className="label-text">Subscribe to our newsletter for the latest updates.</span>
+                            <span>Subscribe to our newsletter for the latest updates.</span>
                         </label>
                         <div className="join">
                             <input
                                 type="text"
-                                placeholder="username@site.com"
+                                placeholder="Enter your email"
                                 className="input input-bordered join-item" />
                             <button className="btn btn-primary join-item">Subscribe</button>
                         </div>
