@@ -10,7 +10,8 @@ import MainSection from './components/MainSection';
 
 function App() {
   const [coinBalance, setCoinBalance] = useState(0);
-  // Coin Added in Navbar 
+
+  // Function to add coins and show a success message
   const addCoins = (amount) => {
     setCoinBalance(coinBalance + amount);
     toast.success("Credit Added to your Account");
@@ -20,8 +21,8 @@ function App() {
     <>
       <ToastContainer position="top-center" />
       <Navbar initialBalance={coinBalance} addCoins={addCoins} />
-      <Banner onClaimCreditBtn={() => addCoins(500000)} />
-      <MainSection />
+      <Banner onClaimCreditBtn={() => addCoins(1200000)} />
+      <MainSection coinBalance={coinBalance} setCoinBalance={setCoinBalance} />
       <Newsletter />
       <Footer />
     </>

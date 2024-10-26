@@ -1,4 +1,3 @@
-// components/Navbar.jsx
 import PropTypes from 'prop-types';
 
 const Navbar = ({ initialBalance = 0 }) => {

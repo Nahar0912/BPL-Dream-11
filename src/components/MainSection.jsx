@@ -1,8 +1,11 @@
+// MainSection.jsx
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import SelectedPlayer from './SelectedPlayer';
 import Players from './Players';
+import { toast } from 'react-toastify'; // Make sure this is imported
 
-const MainSection = () => {
+const MainSection = ({ coinBalance, setCoinBalance }) => {
     const [playersData, setPlayersData] = useState([]);
     const [activeTab, setActiveTab] = useState('available'); 
     const [selectedPlayers, setSelectedPlayers] = useState([]);
@@ -14,13 +17,28 @@ const MainSection = () => {
     }, []);
 
     const handlePlayerSelect = (player) => {
-        if (!selectedPlayers.some(selected => selected.id === player.id)) {
-            setSelectedPlayers([...selectedPlayers, player]);
+        // Check if the player is already selected
+        if (selectedPlayers.some(selected => selected.id === player.id)) {
+            toast.error("The player is already selected");
+            return;
         }
+        // Check if there are enough coins to buy the player
+        if (coinBalance < player.price) {
+            toast.error("Not enough coin to buy player");
+            return;
+        }
+        // Deduct the coin amount from the balance
+        setCoinBalance(coinBalance - player.price);
+        // Add player to selected players
+        setSelectedPlayers([...selectedPlayers, player]);
+        toast.success("The player is selected successfully");
     };
 
-    // Function to delete a selected player
     const handlePlayerDelete = (id) => {
+        const playerToDelete = selectedPlayers.find(player => player.id === id);
+        if (playerToDelete) {
+            setCoinBalance(coinBalance + playerToDelete.price); // Refund the price of the deleted player
+        }
         setSelectedPlayers(selectedPlayers.filter(player => player.id !== id));
     };
 
@@ -51,6 +69,12 @@ const MainSection = () => {
             )}
         </div>
     );
+};
+
+
+MainSection.propTypes = {
+    coinBalance: PropTypes.number.isRequired,
+    setCoinBalance: PropTypes.func.isRequired,
 };
 
 export default MainSection;

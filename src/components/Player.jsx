@@ -1,3 +1,4 @@
+// Player.jsx
 import PropTypes from 'prop-types';
 
 const Player = ({ player, onSelect }) => {
@@ -11,13 +12,14 @@ const Player = ({ player, onSelect }) => {
                     <h2 className="card-title">Name: {player.name}</h2>
                     <p>Team: {player.team}</p>
                     <p>Rating: {player.rating}</p>
+                    <p>Role: {player.role}</p>
                     <p>Batting Style: {player.battingHand}</p>
+                    <p>Price: ${player.price}</p>
                     <div className="card-actions justify-end">
                         <button 
                             className="btn btn-primary" 
-                            onClick={() => onSelect(player)} // Call the function to select the player
-                        >
-                            Price: ${player.price}
+                            onClick={() => onSelect(player)}
+                        > Choose Player
                         </button>
                     </div>
                 </div>
