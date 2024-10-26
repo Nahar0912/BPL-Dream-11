@@ -16,21 +16,23 @@ const MainSection = ({ coinBalance, setCoinBalance }) => {
     }, []);
 
     const handlePlayerSelect = (player) => {
+        if (selectedPlayers.length >= 6) {
+            toast.error("You cannot choose more than 6 players");
+            return;
+        }
         if (selectedPlayers.some(selected => selected.id === player.id)) {
             toast.error("The player is already selected");
             return;
         }
-        else if (coinBalance < player.price) {
+        if (coinBalance < player.price) {
             toast.error("Not enough coin to buy player");
             return;
         }
-        else {
-            setCoinBalance(coinBalance - player.price);
-            setSelectedPlayers([...selectedPlayers, player]);
-            toast.success("The player is selected successfully");
-        }
+        setCoinBalance(coinBalance - player.price);
+        setSelectedPlayers([...selectedPlayers, player]);
+        toast.success("The player is selected successfully");
     };
-    // Delete the player from selected area
+
     const handlePlayerDelete = (id) => {
         const playerToDelete = selectedPlayers.find(player => player.id === id);
         if (playerToDelete) {
@@ -38,7 +40,7 @@ const MainSection = ({ coinBalance, setCoinBalance }) => {
         }
         setSelectedPlayers(selectedPlayers.filter(player => player.id !== id));
     };
-    // Add More Player-btn in Selected area 
+
     const handleAddMore = () => {
         setActiveTab('available');
     };
@@ -59,7 +61,7 @@ const MainSection = ({ coinBalance, setCoinBalance }) => {
                         className={`btn mt-4 md:mt-0 w-full md:w-auto rounded-s-full ${activeTab === 'selected' ? 'bg-yellow-300' : ''}`}
                         onClick={() => setActiveTab('selected')}
                     >
-                        Selected
+                        Selected ({selectedPlayers.length}/6)
                     </button>
                 </div>
             </div>
