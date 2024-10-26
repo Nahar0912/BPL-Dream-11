@@ -47,22 +47,27 @@ const MainSection = ({ coinBalance, setCoinBalance }) => {
 
     return (
         <div className="relative">
-            <div className="flex flex-col md:flex-row justify-end mx-20 mt-7 mb-2">
-                <div dir="ltr" className="mr-2">
-                    <button
-                        className={`btn mt-4 md:mt-0 w-full md:w-auto rounded-s-full ${activeTab === 'available' ? 'bg-yellow-300' : ''}`}
-                        onClick={() => setActiveTab('available')}
-                    >
-                        Available
-                    </button>
-                </div>
-                <div dir="rtl">
-                    <button
-                        className={`btn mt-4 md:mt-0 w-full md:w-auto rounded-s-full ${activeTab === 'selected' ? 'bg-yellow-300' : ''}`}
-                        onClick={() => setActiveTab('selected')}
-                    >
-                        Selected ({selectedPlayers.length}/6)
-                    </button>
+            <div className="flex flex-col md:flex-row justify-between items-center mx-20 mt-10 mb-7">
+                <h1 className="font-bold text-xl">
+                    {activeTab === 'available' ? 'Available Players' : `Selected Players (${selectedPlayers.length}/6)`}
+                </h1>
+                <div className="flex mt-4 md:mt-0">
+                    <div dir="ltr" className="mr-2">
+                        <button
+                            className={`btn w-full md:w-auto rounded-s-full ${activeTab === 'available' ? 'bg-yellow-300' : ''}`}
+                            onClick={() => setActiveTab('available')}
+                        >
+                            Available
+                        </button>
+                    </div>
+                    <div dir="rtl">
+                        <button
+                            className={`btn w-full md:w-auto rounded-s-full ${activeTab === 'selected' ? 'bg-yellow-300' : ''}`}
+                            onClick={() => setActiveTab('selected')}
+                        >
+                            Selected ({selectedPlayers.length}/6)
+                        </button>
+                    </div>
                 </div>
             </div>
             {activeTab === 'available' ? (

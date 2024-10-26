@@ -3,15 +3,10 @@ import Player from './Player';
 
 const Players = ({ players, onPlayerSelect }) => {
     return (
-        <div className='mx-20'>
-            <div className="flex flex-col md:flex-row justify-between items-center mt-7 mb-2">
-                <h1 className="font-bold text-xl">Available Players</h1>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {players.map(player => (
-                    <Player key={player.id} player={player} onSelect={onPlayerSelect} />
-                ))}
-            </div>
+        <div className="mx-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {players.map(player => (
+                <Player key={player.id} player={player} onSelect={onPlayerSelect} />
+            ))}
         </div>
     );
 };

@@ -10,7 +10,7 @@ const Newsletter = () => {
                     placeholder="Enter your email"
                     className="input input-bordered join-item"
                 />
-                <button className="btn btn-primary join-item">Subscribe</button>
+                <button className="btn bg-amber-400 join-item">Subscribe</button>
             </div>
         </div>
     );

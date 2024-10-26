@@ -2,15 +2,12 @@ import PropTypes from 'prop-types';
 
 const SelectedPlayer = ({ players, onDelete, onAddMore }) => {
     return (
-        <div className="mx-20 my-24">
-            <div className="flex flex-col md:flex-row justify-between items-center mt-7 mb-2">
-                <h1 className="font-bold text-xl">Selected Players ({players.length}/6)</h1>
-            </div>
+        <div className="mx-20 my-20">
             {players.length > 0 ? (
                 players.map(player => (
-                    <div key={player.id} className="mb-2 flex border border-slate-400 rounded-lg shadow-xl">
-                        <figure className="px-4 pt-4">
-                            <img className="rounded-xl h-20 w-20" src={player.image} alt={player.name} />
+                    <div key={player.id} className="flex items-center justify-center border border-slate-400 rounded-lg shadow-xl">
+                        <figure className="px-5">
+                            <img className="rounded-xl h-24 w-24" src={player.image} alt={player.name} />
                         </figure>
                         <div className="card-body">
                             <h2 className="card-title">Name: {player.name}</h2>
