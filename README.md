@@ -1,8 +1,28 @@
-# React + Vite
+# **BPL Dream 11**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## 🚀 **Project Description**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+BPL Dream 11 is a dynamic cricket bidding platform that allows users to select and bid for their favorite players. With a user-friendly interface, participants can manage their budgets, view player statistics, and create their dream teams while competing against others.
+
+---
+
+## 🛠️ **Technologies Used**
+
+- **Frontend:** React, Vite, JSX, Tailwind CSS
+- **Backend:** Node.js, Express
+- **Database:** JSON FILE
+- **Version Control:** Git, GitHub
+- **Others:** React Toastify, PropTypes
+
+---
+
+## ✨ **Key Features**
+
+1. **Player Selection:** Users can select players with a dynamic selection limit and manage their coin balance.
+2. **Selected Selection:** Selected Players will show in this section and user can delete any selected player and their coins will be refunded.
+3. **Real-time Updates:** Dynamic data fetching that allows for real-time updates on player availability and bidding status.
+
+---
+
+### 📦 **Live Link: https://peddy-adoption-center.netlify.app/**
