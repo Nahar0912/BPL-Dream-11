@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Player from './Player';
 
-const Players = ({ players }) => {
+const Players = ({ players, onPlayerSelect }) => {
     return (
         <div className='mx-20'>
             <div className="flex flex-col md:flex-row justify-between items-center mt-7 mb-2">
@@ -9,14 +9,13 @@ const Players = ({ players }) => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {players.map(player => (
-                    <Player key={player.id} player={player} />
+                    <Player key={player.id} player={player} onSelect={onPlayerSelect} />
                 ))}
             </div>
         </div>
     );
 };
 
-// PropTypes validation
 Players.propTypes = {
     players: PropTypes.arrayOf(
         PropTypes.shape({
@@ -30,6 +29,7 @@ Players.propTypes = {
             image: PropTypes.string.isRequired,
         })
     ).isRequired,
+    onPlayerSelect: PropTypes.func.isRequired,
 };
 
 export default Players;

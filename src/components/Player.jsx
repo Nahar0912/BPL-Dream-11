@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
 
-const Player = ({ player }) => {
+const Player = ({ player, onSelect }) => {
     return (
         <div>
             <div className="card bg-base-100 w-96 shadow-xl">
                 <figure className="px-4 pt-4">
-                    <img className="rounded-xl" 
-                    src={player.image}
-                    alt={player.name} />
+                    <img className="rounded-xl h-52 w-80" src={player.image} alt={player.name} />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">Name: {player.name}</h2>
@@ -15,7 +13,12 @@ const Player = ({ player }) => {
                     <p>Rating: {player.rating}</p>
                     <p>Batting Style: {player.battingHand}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Price: ${player.price}</button>
+                        <button 
+                            className="btn btn-primary" 
+                            onClick={() => onSelect(player)} // Call the function to select the player
+                        >
+                            Price: ${player.price}
+                        </button>
                     </div>
                 </div>
             </div>
@@ -23,7 +26,6 @@ const Player = ({ player }) => {
     );
 };
 
-// PropTypes validation
 Player.propTypes = {
     player: PropTypes.shape({
         id: PropTypes.number.isRequired,
@@ -35,6 +37,7 @@ Player.propTypes = {
         price: PropTypes.number.isRequired,
         image: PropTypes.string.isRequired,
     }).isRequired,
+    onSelect: PropTypes.func.isRequired,
 };
 
 export default Player;
