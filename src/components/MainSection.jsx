@@ -1,9 +1,8 @@
-// MainSection.jsx
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import SelectedPlayer from './SelectedPlayer';
 import Players from './Players';
-import { toast } from 'react-toastify'; // Make sure this is imported
+import { toast } from 'react-toastify'; 
 
 const MainSection = ({ coinBalance, setCoinBalance }) => {
     const [playersData, setPlayersData] = useState([]);
@@ -17,29 +16,31 @@ const MainSection = ({ coinBalance, setCoinBalance }) => {
     }, []);
 
     const handlePlayerSelect = (player) => {
-        // Check if the player is already selected
         if (selectedPlayers.some(selected => selected.id === player.id)) {
             toast.error("The player is already selected");
             return;
         }
-        // Check if there are enough coins to buy the player
-        if (coinBalance < player.price) {
+        else if (coinBalance < player.price) {
             toast.error("Not enough coin to buy player");
             return;
         }
-        // Deduct the coin amount from the balance
-        setCoinBalance(coinBalance - player.price);
-        // Add player to selected players
-        setSelectedPlayers([...selectedPlayers, player]);
-        toast.success("The player is selected successfully");
+        else {
+            setCoinBalance(coinBalance - player.price);
+            setSelectedPlayers([...selectedPlayers, player]);
+            toast.success("The player is selected successfully");
+        }
     };
-
+    // Delete the player from selected area
     const handlePlayerDelete = (id) => {
         const playerToDelete = selectedPlayers.find(player => player.id === id);
         if (playerToDelete) {
-            setCoinBalance(coinBalance + playerToDelete.price); // Refund the price of the deleted player
+            setCoinBalance(coinBalance + playerToDelete.price); 
         }
         setSelectedPlayers(selectedPlayers.filter(player => player.id !== id));
+    };
+    // Add More Player-btn in Selected area 
+    const handleAddMore = () => {
+        setActiveTab('available');
     };
 
     return (
@@ -65,12 +66,15 @@ const MainSection = ({ coinBalance, setCoinBalance }) => {
             {activeTab === 'available' ? (
                 <Players players={playersData} onPlayerSelect={handlePlayerSelect} />
             ) : (
-                <SelectedPlayer players={selectedPlayers} onDelete={handlePlayerDelete} />
+                <SelectedPlayer 
+                    players={selectedPlayers} 
+                    onDelete={handlePlayerDelete} 
+                    onAddMore={handleAddMore}
+                />
             )}
         </div>
     );
 };
-
 
 MainSection.propTypes = {
     coinBalance: PropTypes.number.isRequired,

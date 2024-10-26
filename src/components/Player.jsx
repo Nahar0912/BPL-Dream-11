@@ -1,4 +1,3 @@
-// Player.jsx
 import PropTypes from 'prop-types';
 
 const Player = ({ player, onSelect }) => {

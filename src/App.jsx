@@ -1,4 +1,3 @@
-// App.jsx
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,7 +10,6 @@ import MainSection from './components/MainSection';
 function App() {
   const [coinBalance, setCoinBalance] = useState(0);
 
-  // Function to add coins and show a success message
   const addCoins = (amount) => {
     setCoinBalance(coinBalance + amount);
     toast.success("Credit Added to your Account");
@@ -20,6 +18,7 @@ function App() {
   return (
     <>
       <ToastContainer position="top-center" />
+      
       <Navbar initialBalance={coinBalance} addCoins={addCoins} />
       <Banner onClaimCreditBtn={() => addCoins(1200000)} />
       <MainSection coinBalance={coinBalance} setCoinBalance={setCoinBalance} />
