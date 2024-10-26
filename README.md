@@ -23,4 +23,4 @@ BPL Dream 11 is a dynamic cricket bidding platform that allows users to select a
 3. **Real-time Updates:** Dynamic data fetching that allows for real-time updates on player availability and bidding status.
 
 
-### 📦 **Live Link: https://peddy-adoption-center.netlify.app/**
+### 📦 **Live Link: https://bpl-dream-11-with-react-vite.netlify.app/ **
