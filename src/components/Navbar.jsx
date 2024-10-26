@@ -1,8 +1,11 @@
+// components/Navbar.jsx
 import PropTypes from 'prop-types';
 
 const Navbar = ({ initialBalance = 0 }) => {
     return (
-        <div className="navbar bg-base-100 p-5 px-20">
+        <div 
+            className="navbar bg-base-100 p-5 px-20 sticky top-0 z-50"
+        >
             <div className="flex-1">
                 <img src="/src/assets/logo.png" alt="Site Logo" />
             </div>

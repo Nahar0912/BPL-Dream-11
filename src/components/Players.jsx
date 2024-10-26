@@ -1,14 +1,35 @@
+import PropTypes from 'prop-types';
 import Player from './Player';
-const Players = () => {
+
+const Players = ({ players }) => {
     return (
         <div className='mx-20'>
             <div className="flex flex-col md:flex-row justify-between items-center mt-7 mb-2">
-                <h1 className="font-bold text-xl">Available Players </h1>
-                <button id="sort-price-btn" className="btn bg-teal-800 text-white mt-4 md:mt-0 w-full md:w-auto">Sort by Price</button>
+                <h1 className="font-bold text-xl">Available Players</h1>
             </div>
-            <Player />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {players.map(player => (
+                    <Player key={player.id} player={player} />
+                ))}
+            </div>
         </div>
     );
+};
+
+// PropTypes validation
+Players.propTypes = {
+    players: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            role: PropTypes.string.isRequired,
+            team: PropTypes.string.isRequired,
+            battingHand: PropTypes.string.isRequired,
+            rating: PropTypes.number.isRequired,
+            price: PropTypes.number.isRequired,
+            image: PropTypes.string.isRequired,
+        })
+    ).isRequired,
 };
 
 export default Players;

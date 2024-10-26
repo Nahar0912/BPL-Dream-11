@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "name": "Tamim Iqbal",
+        "role": "Batsman",
+        "team": "Bangladesh",
+        "battingHand": "Left-hand",
+        "rating": 8.6,
+        "price": 1200000,
+        "image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_480,q_50/lsci/db/PICTURES/CMS/386100/386120.10.png"
+    },
+    {
+        "id": 2,
+        "name": "Mushfiqur Rahim",
+        "role": "Wicketkeeper Batsman",
+        "team": "Bangladesh",
+        "battingHand": "Right-hand",
+        "rating": 8.8,
+        "price": 1250000,
+        "image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/388200/388294.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Virat Kohli",
+        "role": "Batsman",
+        "team": "India",
+        "battingHand": "Right-hand",
+        "rating": 9.5,
+        "price": 1500000,
+        "image": "https://www.hindustantimes.com/static-content/1y/cricket-logos/players/virat-kohli.png"
+    },
+    {
+        "id": 4,
+        "name": "Ben Stokes",
+        "role": "All-Rounder",
+        "team": "England",
+        "battingHand": "Left-hand",
+        "rating": 9.0,
+        "price": 1400000,
+        "image": "https://cdn.prod.website-files.com/5ece79331c66c8b9bc6bff1e/60783660873ea9455711a937_Th%20Ben%20Stokes%20Celebrates.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Pat Cummins",
+        "role": "Bowler",
+        "team": "Australia",
+        "battingHand": "Right-hand",
+        "rating": 8.7,
+        "price": 1300000,
+        "image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/383500/383559.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Kane Williamson",
+        "role": "Batsman",
+        "team": "New Zealand",
+        "battingHand": "Right-hand",
+        "rating": 9.2,
+        "price": 1450000,
+        "image": "https://icdn.guerillacricket.com/wp-content/uploads/2023/11/Screenshot-Capture-2023-11-18-02-52-42.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Jasprit Bumrah",
+        "role": "Bowler",
+        "team": "India",
+        "battingHand": "Right-hand",
+        "rating": 8.9,
+        "price": 1350000,
+        "image": "https://media.gettyimages.com/id/2156821079/photo/new-york-new-york-jasprit-bumrah-of-india-celebrates-after-taking-the-wicket-of-babar-azam-of.jpg?s=612x612&w=gi&k=20&c=I9FN3HFDhSrsDKEv4Rg6bIvHYx2NXwMz-cZAyymTIMY="
+    },
+    {
+        "id": 8,
+        "name": "David Warner",
+        "role": "Batsman",
+        "team": "Australia",
+        "battingHand": "Left-hand",
+        "rating": 9.1,
+        "price": 1420000,
+        "image": "https://bsmedia.business-standard.com/_media/bs/img/article/2024-01/02/full/1704172049-0543.jpg?im=FeatureCrop,size=(826,465)"
+    },
+    {
+        "id": 9,
+        "name": "Shakib Al Hasan",
+        "role": "All-Rounder",
+        "team": "Bangladesh",
+        "battingHand": "Left-hand",
+        "rating": 9.3,
+        "price": 1400000,
+        "image": "https://images.prothomalo.com/prothomalo-english%2F2024-06%2Fd86ef8c2-3890-48a1-adbf-25c384f99637%2FShakib.avif?auto=format%2Ccompress&fmt=webp&dpr=1.0&format=webp&w=400"
+    },
+    {
+        "id": 10,
+        "name": "Mustafizur Rahman",
+        "role": "Bowler",
+        "team": "Bangladesh",
+        "battingHand": "Left-hand",
+        "rating": 8.5,
+        "price": 1150000,
+        "image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/383500/383539.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Babar Azam",
+        "role": "Batsman",
+        "team": "Pakistan",
+        "battingHand": "Right-hand",
+        "rating": 9.4,
+        "price": 1480000,
+        "image": "https://www.cricketcountry.com/wp-content/uploads/2024/02/Babar-Azam-1.jpg"
+    }
+]
